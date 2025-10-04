@@ -1,0 +1,127 @@
+
+
+body { margin: 0 auto; padding: 0;
+
+
+    
+}
+
+.firstsection{
+
+
+
+
+ padding-bottom:90px;
+    background-image:url("image/Cover.png") ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.fa-plane{
+font-size: 20px;
+margin-right:5px;
+  transform: rotate(1deg); /* rotate counter-clockwise */
+}
+
+.firstnav{
+
+
+
+    width:95%;
+
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+
+}
+
+.firstnav li{
+
+   /* border-style: solid;
+   padding:8px;
+   border-radius: 8px; */
+color:white;
+font-weight: 400;
+  font-family: "Funnel Display", sans-serif;
+margin-right:20px;
+    display:inline-block;
+    transition: transform 0.3s ease; 
+}
+
+.firstnav li:hover{
+
+    text-shadow: 4px 4px 4px rgb(5, 5, 5,0.5);
+    transform:translateY(-5px);
+
+}
+.title{
+color:white;
+font-size: 25px;
+font-weight: 500;
+     font-family: "DM Serif Display", serif;
+margin:0;
+}
+.innertitle{
+ margin: 0;
+    padding: 0;
+        box-sizing: border-box;
+}
+
+.outerintro{
+
+    margin-top:60px;
+   
+    display: flex;
+    justify-content: center;
+    width:95%;
+}
+.introduction{
+
+    
+     font-family: "Funnel Display", sans-serif;
+    color:white;
+ text-align: center;
+
+    width:95%;
+    font-size: 90px;
+    font-weight: 700;
+    letter-spacing: 2px;
+      line-height: 1.1; /* keeps heading more compact */
+}
+.sulod{
+
+    margin-right:50px;
+    margin-left:50px;
+}
+.para {
+  font-family: "Funnel Display", sans-serif;
+  font-size: 18px;
+  margin-top: 10px; 
+  font-weight: 300;
+  position:relative;
+  bottom:50px;
+}
+#btnbook{
+background-color: rgb(255, 255, 255);
+border-style: none;
+padding:20px;
+color:rgb(0, 0, 0);
+letter-spacing: 2px;
+font-weight: 700;
+  font-family: "Funnel Display", sans-serif;
+font-size: 15px;
+border-radius: 8px;
+transition: transform 0.3s ease;
+}
+
+#btnbook:hover{
+transform:translateY(-5px);
+}
