@@ -318,7 +318,171 @@
         </div>
     </div>
 
+    <!-- FOOTER NANI DIRENG DAPITA -->
 
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-col">
+      <h3>FlyHigh Express</h3>
+      <p>Soaring beyond the clouds to bring you closer to your dreams. Travel made simple, safe, and unforgettable.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>📍 15000 Ninoy Aquino Street</p>
+      <p>📞 (02) 555-5555</p>
+      <p>📧 flyhighexpress@gmail.com</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <p><a href="#">Flight Destinations</a></p>
+      <p><a href="#">Travel Deals</a></p>
+      <p><a href="#">Airport Lounges</a></p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Help Center</h4>
+      <p><a href="#">Manage Booking</a></p>
+      <p><a href="#">Contact Support</a></p>
+      <p><a href="#">Terms & Conditions</a></p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 FlyHigh Express — All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- Booking Popup (Initially Hidden) -->
+<div id="bookingModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+
+    <section class="booking" id="bookingSection">
+      <h2 class="booknata">Booking Details</h2>
+      <div class="outerpartnaka">
+        <div class="innerpartsabooking">
+          <div class="form-group">
+            <label>From:</label><br>
+            <input type="text" id="from">
+          </div>
+
+          <div class="form-group">
+            <label>To:</label><br>
+            <input type="text" id="to">
+          </div>
+
+          <div class="form-group">
+            <label>Flight Type:</label>
+            <select id="flightType">
+              <option value="">Select type</option>
+              <option value="roundtrip">Round Trip</option>
+              <option value="oneway">One Way</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="innerpartsabooking">
+          <div class="date-group">
+            <div class="form-group">
+              <label>Depart Date:</label><br>
+              <input type="date" id="departDate">
+            </div>
+
+            <div class="form-group" id="returnDateGroup">
+              <label>Return Date:</label><br>
+              <input type="date" id="returnDate">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Passengers:</label>
+            <input type="number" id="passengerCount" min="1" value="1">
+          </div>
+        </div>
+      </div>
+
+      <button id="searchFlightBtn">Search Flight</button>
+    </section>
+  </div>
+</div>
+
+
+<!-- Flight Selection Modal -->
+ <div class="flight-container">
+<div id="flightModal" class="modal">
+  <div class="modal-content flight-content">
+    <h3>Available Flights</h3>
+    <div id="flightList"></div>
+    <button id="backToBooking" class="backbutton">Back</button>
+  </div>
+</div>
+</div>
+<div id="passengerModal" class="modal">
+  <div class="passenger-content">
+    <span class="close-btn" id="closePassengerModal">&times;</span>
+    <h2 class="booknata">Passenger Information</h2>
+
+    <div id="passengerFormsContainer">
+      <!-- Example passenger cards -->
+      <div class="passenger-card">
+        <h4>Passenger 1</h4>
+        <input type="text" placeholder="Full Name">
+        <input type="number" placeholder="Age">
+        <select>
+          <option value="">Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+
+      <div class="passenger-card">
+        <h4>Passenger 2</h4>
+        <input type="text" placeholder="Full Name">
+        <input type="number" placeholder="Age">
+        <select>
+          <option value="">Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+      <!-- more forms will appear here dynamically -->
+    </div>
+
+    <div class="passenger-actions">
+      <button id="backToFlights">Back</button>
+      <button id="confirmBooking">Confirm</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Summary Modal -->
+<div id="summaryModal" class="modal">
+  <div class="modal-content summary-content">
+    <h3>Booking Summary</h3>
+    <div id="summaryDetails"></div>
+    <div class="summary-actions">
+      <button id="backToPassenger" class="backbutton">Back</button>
+      <button id="bookNowBtn" class="confirmbutton">Book Now</button>
+    </div>
+  </div>
+</div>
+
+<!-- Success Modal -->
+<div id="successModal" class="modal">
+  <div class="modal-content success-content">
+    <h3>Booking Successful!</h3>
+    <p>Thank you for flying with <strong>Fly High Skylines ✈️</strong></p>
+    <button id="closeSuccessBtn" class="confirmbutton">Close</button>
+  </div>
+</div>
 
 
 

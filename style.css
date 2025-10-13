@@ -553,20 +553,7 @@ font-family: "Funnel Display";
   overflow: hidden;
 }
 
-/* subtle dark overlay for text contrast */
-.sixthsection::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-  z-index: 1;
-}
 
-.sixthoverlay {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-}
 
 .sixthtitle {
   font-family: "Poppins", sans-serif;
@@ -602,5 +589,517 @@ font-family: "Funnel Display";
   box-shadow: 0 6px 15px rgba(255, 95, 109, 0.4);
 }
 
+/* footer nani shaa */
+/* 🌤 FOOTER SECTION */
+.footer {
 
-  
+  width: 100%;
+background-color: rgb(247, 250, 252);
+  color: #1a1a1a;
+  padding-top: 40px;
+  margin-top: 80px;
+  border-top: 3px solid #ff7b2f ;
+  font-family: "Inter", sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 0 40px 40px;
+}
+
+.footer-col {
+  text-align: center;
+  flex: 1 1 220px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 76, 153, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.footer-col:hover {
+  transform: translateY(-4px);
+  border-style: solid;
+  border-color: #ff7b2f  ;
+  box-shadow: 0 6px 16px rgba(0, 76, 153, 0.2);
+}
+
+.footer-col h3,
+.footer-col h4 {
+  color: black;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-family: "Funnel Display";
+}
+
+.footer-col p {
+  margin: 6px 0;
+  color: #333;
+  font-size: 15px;
+  font-family: "Funnel Display";
+}
+
+.footer-col a {
+ 
+  color: black;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-col a:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 18px;
+  color:  #ff5f6d;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+color:#ff7b2f;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 18px 10px;
+  background: linear-gradient(90deg, #ff5f6d, #ff7b2f);
+  color: #fff;
+  font-size: 16px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* mo overlay nani sha */
+#bookingModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: none; 
+  /* pwede sad mo gamit kag visibility: hidden */
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+#bookingModal.active {
+  display: flex;
+  /* pwede sad mo gamit kag visibility: visible */
+  opacity: 1;
+}
+
+/* Modal box */
+.modal-content {
+  font-family: "Funnel Display";
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  width: 500px;
+  max-width: 90%;
+  position: relative;
+  animation: popin 0.3s ease;
+}
+
+
+/* ==== Close Button ==== */
+.close-btn {
+  position: absolute;
+  top:5px;
+  right: 20px;
+  font-size: 25px;
+  color: #555;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.close-btn:hover {
+  color: #ff6b35;
+  transform: scale(1.1);
+}
+
+/* ==== Booking Section Title ==== */
+.booknata {
+  text-align: center;
+  color: #222;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+/* ==== Layout Wrapper ==== */
+.outerpartnaka {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: space-between;
+}
+
+/* ==== Column Container ==== */
+.innerpartsabooking {
+  flex: 1 1 45%;
+
+  /* ang dili niya short hand way of doing it is kani */
+/* 
+  flex-grow: 1;
+flex-shrink: 1;
+flex-basis: 45%; */
+
+}
+
+/* ==== Form Group ==== */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.4rem;
+}
+
+/* ==== Inputs and Select ==== */
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.2s ease;
+  background-color: #fff;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #ff6b35;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.2);
+}
+
+/* ==== Button ==== */
+#searchFlightBtn {
+  width: 100%;
+  background: linear-gradient(135deg, #ff6b35, #ffb347);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+#searchFlightBtn:hover {
+  background: linear-gradient(135deg, #ff7f50, #ffc371);
+  transform: translateY(-2px);
+}
+
+
+/* PANG PANGITA NANI SA FLIGHT */
+/* Flight card inside flight modal */
+.flight-content { width: 600px; max-width: 95%; padding: 20px; }
+.flight-card {
+  border-radius: 10px;
+  background: #fffdf9;
+  padding: 12px 14px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+  margin-bottom: 12px;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+
+.flight-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+.flight-no { font-weight:700; }
+.fare-type { font-size:0.9rem; color:#ff6b35; font-weight:700; }
+.flight-body p { margin:4px 0; font-size:0.95rem; color:#333; }
+.flight-actions { margin-top:8px; text-align:right; }
+.select-flight-btn {
+  background: linear-gradient(90deg,#ff5f6d,#ff7b2f);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.select-flight-btn:hover { transform: translateY(-3px); }
+
+/* Turn all flight cards into rows */
+#flightList {
+  display: flex;
+  flex-wrap: wrap; /* So if it overflows, it wraps to the next line */
+  justify-content: center; /* Centers the cards horizontally */
+  gap: 20px; /* Adds space between the cards */
+  max-height: 70vh; /* So it fits within the modal */
+  overflow-y: auto; /* Scroll vertically if needed */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Make flight cards consistent in size */
+.flight-card {
+  width: 260px; /* Each card will have a consistent width */
+  border-radius: 10px;
+  background: #fffdf9;
+  padding: 14px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.06);
+  transition: transform 0.2s ease;
+}
+
+.flight-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Adjust modal content to fit horizontally oriented cards */
+.flight-content {
+  width: 90%;
+  max-width: 900px; /* Wider modal to fit more cards per row */
+  padding: 20px;
+  overflow: hidden;
+}
+
+.backbutton{
+
+font-weight: 700;
+
+  border-style: none;
+  padding:10px;
+  color:white;
+  font-family: "Funnel Display";
+  border-radius: 10px;
+  background: linear-gradient(90deg,#ff5f6d,#ff7b2f);
+transition:transform 0.3s ease;
+}
+.backbutton:hover{
+transform:translateY(-5px);
+}
+
+
+/* Passenger blocks */
+.passenger-block { margin-bottom: 12px; background: #fff; padding:10px; border-radius:8px; }
+.passenger-block h4 { margin: 0 0 8px 0; font-size: 1rem; }
+
+/* Ensure the modal overlay class (your #bookingModal) also covers flight & passenger modals */
+.modal { display: none; position: fixed; z-index: 1000; top:0; left:0; width:100%; height:100vh; justify-content:center; align-items:center; background: rgba(0,0,0,0.4); backdrop-filter: blur(6px); }
+.modal.active { display:flex; }
+.modal .modal-content { background: white; border-radius:10px; padding: 20px; width: 500px; max-width: 95%; position: relative; }
+
+
+
+/* ===== PASSENGER FORM SECTION ===== */
+.booknata{
+font-family: "Funnel Display";
+
+
+}
+
+
+.passenger-content {
+  width: 90%;
+  max-width: 900px; /* Wider to match flight selection modal */
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* Container for all passenger forms */
+#passengerFormsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-height: 70vh; /* allows scrolling when forms exceed height */
+  overflow-y: auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Individual passenger card */
+.passenger-card {
+  flex: 1 1 260px;
+  background: #fffdf9;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  padding: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.passenger-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(255, 95, 109, 0.25);
+  border-color: #ff7b2f;
+}
+
+/* Card Title */
+.passenger-card h4 {
+  margin: 0 0 10px 0;
+  font-family: "Funnel Display", sans-serif;
+  font-size: 1rem;
+  color: #111;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Input styling inside passenger form */
+.passenger-card input,
+.passenger-card select {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+  outline: none;
+  transition: 0.2s;
+}
+
+.passenger-card input:focus,
+.passenger-card select:focus {
+  border-color: #ff6b35;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.2);
+}
+
+/* Scrollbar customization for passenger container */
+#passengerFormsContainer::-webkit-scrollbar {
+  width: 10px;
+}
+#passengerFormsContainer::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff5f6d, #ff7b2f);
+  border-radius: 8px;
+}
+#passengerFormsContainer::-webkit-scrollbar-track {
+  background: #fff3e6;
+}
+
+/* Back and Confirm Buttons */
+.passenger-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.passenger-actions button {
+  background: linear-gradient(90deg,#ff5f6d,#ff7b2f);
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-family: "Funnel Display", sans-serif;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.passenger-actions button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(255, 95, 109, 0.4);
+}
+
+
+/* PANG SUMMARY NANI */
+
+.summary-content {
+  width: 600px;
+  max-width: 95%;
+  padding: 20px;
+  background: #fffdf9;
+}
+
+.confirmbutton{
+
+font-weight: 700;
+
+  border-style: none;
+  padding:10px;
+  color:white;
+  font-family: "Funnel Display";
+  border-radius: 10px;
+  background: linear-gradient(90deg,#ff5f6d,#ff7b2f);
+transition:transform 0.3s ease;
+}
+.confirmbutton:hover{
+transform:translateY(-5px);
+}
+.summary-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.success-content {
+  text-align: center;
+  background: #fffdf9;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+#successModal h3 {
+  color: #ff5f6d;
+  margin-bottom: 10px;
+}
+
+.summary-section, .passenger-summary-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.summary-section h3, .passenger-summary-card h4 {
+    color: #ff5f6d;
+  margin-bottom: 8px;
+}
+
+/* === Summary Modal Scroll Fix === */
+.summaryContentWrapper {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.summary-section {
+  background: #fff9f2;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.passenger-summary-card {
+  background: #fff3e0;
+  margin: 8px 0;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+
