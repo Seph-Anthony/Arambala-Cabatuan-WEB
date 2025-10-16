@@ -251,10 +251,40 @@ confirmBookingBtn.addEventListener("click", () => {
     const gmail = gmails[i].value.trim();
     const address = addresses[i].value.trim();
 
+
+
     if (!name || !age || !gender || !contact || !gmail || !address) {
-      alert(`Please complete all fields for Passenger ${i + 1}`);
+      alert(` ⚠️ Please complete all fields for Passenger ${i + 1}`);
       return;
     }
+
+    if (isNaN(age) || age <= 0) {
+      alert(`⚠️ Please enter a valid age for Passenger ${i + 1}`);
+      return;
+    }
+
+    
+
+ if (!/^\d{11}$/.test(contact)) {
+      alert(`⚠️ Please enter a valid 11-digit contact number for Passenger ${i + 1}.`);
+      return;
+    }
+
+
+   const gmailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+    if (!gmailPattern.test(gmail)) {
+      alert(`⚠️ Please enter a valid Gmail address for Passenger ${i + 1} (e.g. example@gmail.com).`);
+      return;
+    }
+
+    if(age < 18){
+
+      alert(` ⚠️ Passenger ${i + 1} Should be at least 18 years old to book a flight`);
+
+      return;
+    }
+
+  
 
     bookingContext.passengers.push({ name, age, gender, contact, gmail, address });
   }
